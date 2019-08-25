@@ -80,7 +80,7 @@ class DBHelper{
       return Sqflite.firstIntValue(result);
     }
 
-    Future getNoteList() async {
+    Future<List<Note>> getNoteList() async {
       var noteMapList = await getNoteMapList();
       List<Note> noteList = List<Note>();
       for(var i in noteMapList){
